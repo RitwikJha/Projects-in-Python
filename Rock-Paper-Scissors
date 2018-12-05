@@ -4,5 +4,45 @@ is provided to the user which states 3 possibilities:
 1. The user has won the match.
 2. The user has lost the match.
 3. The match is tied.
-It will be a game of 3 matches. Whoever wins more matches will ultimately win the game.
+It will be a game of 5 matches. Whoever wins more matches will ultimately win the game.
 Finally, an output will be displayed who won the game."""
+
+# PROGRAM GOES HERE...
+
+from random import randint
+from time import sleep
+print('The Game begins!\n')
+win = 0 # Counts matches won
+lose = 0 # Counts lost matches
+tie = 0 # Counts tied matches
+for n in range(1,6):
+    print('Match '+ str(n)+'\n')
+    user = input('Enter your choice (Rock, Paper or Scissors): ').lower() # User input
+    print('Computer\'s choice..\n')
+    sleep(2) # Pauses the execution of program by 2 seconds
+    choice = ['rock','paper','scissors']
+    computer = choice[randint(0,2)] # Computer's input generated randomly
+    if user==computer:
+        print('Match is tied!\n')
+        tie += 1                                      
+        print('Next match..\n')
+        sleep(1)
+    elif (user=='rock' and computer=='paper') or (user=='scissors' and computer=='rock') or \
+    (user=='paper' and computer=='scissors'):
+        print('You lose!\n')
+        lose += 1
+        print('Next match..\n')
+        sleep(1)
+    else:
+        print('You win!\n')
+        win += 1
+        print('Next match..\n')
+        sleep(1)
+print('Matches won: '+str(win)+'\t' +'Matches lost: '+str(lose) + '\t' + 'Matches tied: '+str(tie))
+# Final result of the game
+if win>lose:
+    print('\nCongratulations, You won the game!')
+elif win==lose:
+    print('\nThe game is tied')
+else:
+    print('\nYou lose. Better luck next time.')
