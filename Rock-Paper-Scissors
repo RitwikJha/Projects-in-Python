@@ -1,0 +1,8 @@
+"""This is a game of Rock Paper Scissors between the user and the computer.
+The user gives an input, the computer generates it's own input and output
+is provided to the user which states 3 possibilities:
+1. The user has won the match.
+2. The user has lost the match.
+3. The match is tied.
+It will be a game of 3 matches. Whoever wins more matches will ultimately win the game.
+Finally, an output will be displayed who won the game."""
