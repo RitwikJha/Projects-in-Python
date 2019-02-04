@@ -5,7 +5,8 @@ is provided to the user which states 3 possibilities:
 2. The user has lost the match.
 3. The match is tied.
 It will be a game of 5 matches. Whoever wins more matches will ultimately win the game.
-Finally, an output will be displayed who won the game."""
+Finally, an output will be displayed who won the game.
+This code is written in Python 3."""
 
 # PROGRAM GOES HERE...
 
